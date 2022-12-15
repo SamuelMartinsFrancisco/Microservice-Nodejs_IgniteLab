@@ -1,0 +1,25 @@
+// https://pris.ly/d/prisma-schema
+// https://docs.nestjs.com/recipes/prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Notification {
+  id          String   @id
+  recipientId String
+  content     String
+  category    String
+  readAt      DateTime?
+  createdAt   DateTime @default(now())
+
+  @@index([recipientId])
+}
+
+// npx prisma migrate dev  ->  https://www.prisma.io/docs/concepts/components/prisma-migrate
+// npx prisma studio  ->  https://www.prisma.io/docs/concepts/components/prisma-studio

@@ -6,19 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.SMTPMailService = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const http_module_1 = require("./http.module");
-const prisma_service_1 = require("./prisma.service");
-let AppModule = class AppModule {
+let SMTPMailService = class SMTPMailService {
+    sendEmail() {
+        return 'SMTP Mail';
+    }
 };
-AppModule = __decorate([
-    (0, common_1.Module)({
-        imports: [http_module_1.HttpModule],
-        controllers: [app_controller_1.AppController],
-        providers: [prisma_service_1.PrismaService],
-    })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+SMTPMailService = __decorate([
+    (0, common_1.Injectable)()
+], SMTPMailService);
+exports.SMTPMailService = SMTPMailService;
+//# sourceMappingURL=smtp-mail.service.js.map
