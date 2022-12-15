@@ -1,10 +1,13 @@
+// Module -> é um acoplador de controllers e services. Um ponto central para importar esses outros arquivos.
+
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { HttpModule } from './http.module';
+import { PrismaService } from './prisma.service';
 
 @Module({
-  imports: [],
+  imports: [HttpModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [PrismaService],
 })
 export class AppModule {}
