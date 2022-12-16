@@ -11,3 +11,5 @@ export class CreateNotificationBody {
     
     category: string;
 }
+
+// DTO -> Data Transfer Object
