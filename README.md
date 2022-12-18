@@ -3,7 +3,7 @@
 ![Badge Versão do Angular CLI](https://img.shields.io/badge/Node.js-v18.12.0.-blue)
 ![Badge Versão do Angular CLI](https://img.shields.io/badge/Nest.js-v9.1.5.-blue)
 
-Microsserviço desenvolvido durante o último Ignite Lab do ano da Rocketseat, com Noje.js e Nest.js. É um serviço responsável por criar notificações, como também obter e alterar suas informações.
+Microsserviço desenvolvido durante o último Ignite Lab do ano da Rocketseat, com Noje.js, Nest.js, e Prisma. É um serviço responsável por criar notificações, como também por obter e alterar suas informações.
 
 ## Instalação
 
