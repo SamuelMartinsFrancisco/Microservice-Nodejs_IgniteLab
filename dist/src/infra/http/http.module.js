@@ -11,6 +11,11 @@ const common_1 = require("@nestjs/common");
 const send_notification_1 = require("../../application/use-cases/send-notification");
 const database_module_1 = require("../database/database.module");
 const notifications_controller_1 = require("./controllers/notifications.controller");
+const cancel_notification_1 = require("../../application/use-cases/cancel-notification");
+const count_recipient_notifications_1 = require("../../application/use-cases/count-recipient-notifications");
+const get_recipient_notifications_1 = require("../../application/use-cases/get-recipient-notifications");
+const read_notification_1 = require("../../application/use-cases/read-notification");
+const unread_notification_1 = require("../../application/use-cases/unread-notification");
 let HttpModule = class HttpModule {
 };
 HttpModule = __decorate([
@@ -22,7 +27,12 @@ HttpModule = __decorate([
             notifications_controller_1.NotificationsController
         ],
         providers: [
-            send_notification_1.SendNotification
+            send_notification_1.SendNotification,
+            cancel_notification_1.CancelNotification,
+            count_recipient_notifications_1.CountRecipientNotifications,
+            get_recipient_notifications_1.GetRecipientNotifications,
+            read_notification_1.ReadNotification,
+            unread_notification_1.UnreadNotification
         ]
     })
 ], HttpModule);
